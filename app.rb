@@ -8,7 +8,13 @@ get '/route' do
   erb
 end
 
-get '/cat' do
-  @array = ["Oscar", "Amigo", "Viking"].shuffle.pop
+get '/random-cat' do
+  @name = params[:name]
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
