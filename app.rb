@@ -5,9 +5,10 @@ get '/secret' do
 end
 
 get '/route' do
-  "heyhiya"
+  erb
 end
 
 get '/cat' do
+  @array = ["Oscar", "Amigo", "Viking"].shuffle.pop
   erb(:index)
 end
